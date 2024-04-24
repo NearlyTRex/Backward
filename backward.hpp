@@ -4339,9 +4339,9 @@ public:
     _set_abort_behavior(0, _WRITE_ABORT_MSG | _CALL_REPORTFAULT);
 
     std::set_terminate(&terminator);
-#ifndef BACKWARD_ATLEAST_CXX17
-    std::set_unexpected(&terminator);
-#endif
+//#ifndef BACKWARD_ATLEAST_CXX17
+//    std::set_unexpected(&terminator);
+//#endif
     _set_purecall_handler(&terminator);
     _set_invalid_parameter_handler(&invalid_parameter_handler);
   }
